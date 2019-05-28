@@ -1,0 +1,26 @@
+.features-container {
+  padding: 80px 45px;
+  .features-row {
+    padding: 20px 0;
+    margin-bottom: 30px;
+    &:nth-child(even) {
+      background-color: #fafafa;
+      flex-direction: row-reverse;
+    }
+    h3 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+    h5 {
+      font-size: 20px;
+      color: $lightBlue;
+      margin-bottom: 20px;
+    }
+  }
+  @media screen and (max-width: 767px){
+    padding: 60px 0;
+    .col-text {
+      margin-bottom: 30px;
+    }
+  }
+}

@@ -1,0 +1,111 @@
+.pricing-columns {
+  padding: 80px 60px;
+  .heading {
+    text-align: center;
+    font-size: 18px;
+    color: #696c74;
+    padding: 28px 0;
+    max-width: 195px;
+    margin: 0 auto;
+    height: 100%;
+  }
+  .plan-info {
+    border: 1px solid #efefef;
+    -webkit-box-shadow: 0 2px 13px transparent, 0 2px 2px rgba(0,0,0,0.22);
+    box-shadow: 0 2px 13px transparent, 0 2px 2px rgba(0,0,0,0.22);
+    .heading {
+      h3 {
+        font-size: 22px;
+        margin-bottom: 20px;
+        + p {
+          font-size: 14px;
+          min-height: 100px;
+        }
+      }
+      .price {
+        margin-top: 10px;
+        margin-bottom: 30px;
+        position: relative;
+        font-size: 56px;
+        font-weight: 700;
+        padding-left: 10px;
+        padding-right: 40px;
+        span {
+          font-weight: 400;
+          position: absolute;
+          font-size: 21px;
+          &.currency {
+            top: 0;
+            left: 0;
+          }
+          &.duration {
+            right: 0;
+            bottom: 0;
+          }
+        }
+      }
+      .buy {
+        text-transform: uppercase;
+        color: #fff;
+        background: #696c74;
+        padding: 10px 14px;
+        display: inline-block;
+        letter-spacing: 1px;
+        font-size: 14px;
+        font-weight: 600;
+        border-radius: 3px;
+      }
+    }
+    &.second {
+      h3 {
+        color: $lightBlue;
+      }
+      .buy {
+        background: $lightBlue;
+      }
+    }
+    &.third {
+      h3 {
+        color: $darkBlue;
+      }
+      .buy {
+        background: $darkBlue;
+      }
+    }
+  }
+  @media screen and (max-width: 991px) {
+    padding: 75px 0;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 65px 0;
+    .info-col {
+      display: none;
+    }
+  }
+}
+
+.info-table {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  .info-table-row {
+    &:nth-child(even) {
+      background-color: #f7f7f7;
+    }
+    > div {
+      text-align: left;
+      color: #696c74;
+      font-size: 13px;
+      line-height: 1.4;
+      padding: 20px 10px;
+      border: 1px solid #fff;
+      p {
+        margin-bottom: 0;
+      }
+      &.yes {
+        background-image: url(../img/checkmark_dark.png);
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
