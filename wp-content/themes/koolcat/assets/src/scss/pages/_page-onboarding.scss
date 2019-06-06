@@ -2,73 +2,11 @@
   background-color: #fafafa;
   margin-bottom: 20px;
 }
-
-.onboarding-line {
-  padding: 80px 0;
-  margin-left: 50px;
-  margin-right: 50px;
-  position: relative;
-  .line {
-    position: absolute;
-    height: 10px;
-    width: calc(100% - 80px);
-    top: 110px;
-    background: #c8c8c8;
-    z-index: 1;
-    left: 30px;
-  }
-  .row {
-    z-index: 2;
-    position: relative;
-  }
-  .step {
-    padding: 0 15px;
-    text-align: center;
-    display: block;
-    .number {
-      background: #c8c8c8;
-      border-radius:70px;
-      width: 70px;
-      height: 70px;
-      margin: auto;
-      border: 3px solid #f4f4f4;
-      margin-bottom: 5px;
-      color: #fff;
-      font-weight: 700;
-      font-size: 40px;
-      cursor: pointer;
-    }
-    .text {
-      cursor: pointer;
-    }
-    &.active {
-      color: $lightBlue;
-      .number {
-        background: $lightBlue;
-      }
-    }
-  }
-  @media screen and (max-width: 767px) {
-    padding: 60px 15px;
-    margin-left: 0;
-    margin-right: 0;
-    .line {
-      top: 90px;
-      left: 12%;
-      right: 12%;
-      width: auto;
-    }
-    .step {
-      font-size: 12px;
-      width: 33%;
-    }
-  }
-}
-
 .onboarding-form {
   padding-left: 55px;
   padding-right: 55px;
   padding-bottom: 30px;
+  padding-top: 80px;
   .h2 {
     margin-bottom: 20px;
   }
@@ -86,64 +24,16 @@
       -o-border-radius: 3px;
       border-radius: 3px;
       width: 100%;
-    }
-  }
-  &.form-1 {
-    input {
-      display: none;
-    }
-    .option {
-      max-width: 600px;
-      border-top: 1px solid #ccc;
-      padding: 20px;
-      padding-left: 40px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      cursor: pointer;
-      position: relative;
-      margin-bottom: 10px;
-      transition: all .25s;
-      &:before {
-        content: "";
-        position: absolute;
-        top: 25px;
-        left: 10px;
+      &[type="checkbox"] {
         height: 15px;
         width: 15px;
-        background-color: #fff;
-        border: 1px solid #ccc;
-      }
-      .plan {
-        font-weight: 700;
-        font-size: 18px;
-      }
-      .price {
-        font-size: 20px;
-        color: $lightBlue;
-        font-weight: 700;
-      }
-      p {
-        margin-bottom: 0;
-        width: 100%;
-        margin-top: 10px;
-      }
-      &.active,
-      &:hover{
-        background-color: #fff;
-        border-top-color: transparent;
-      }
-      &.active {
-        &:before {
-          background: $lightBlue;
-        }
+        margin-right: 5px;
       }
     }
   }
   &.form-2 {
     max-width: 810px;
     margin: 0 auto;
-    display: none;
     .row {
       margin-top: 10px;
       margin-bottom: 20px;

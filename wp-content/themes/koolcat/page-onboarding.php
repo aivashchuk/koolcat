@@ -7,73 +7,51 @@ get_header();
 ?>
 
 <div class="onboarding-page">
-    <div class="onboarding-line">
-        <div class="line"></div>
-        <div class="row justify-content-between">
-            <a class="step step-1 active">
-                <span class="number d-flex align-items-center justify-content-center">1</span>
-                <span class="text"><?php the_field('step_1_text'); ?></span>
-            </a>
-
-            <a class="step step-2">
-                <span class="number d-flex align-items-center justify-content-center">2</span>
-                <span class="text"><?php the_field('step_2_text'); ?></span>
-            </a>
-
-            <a class="step step-3 disable">
-                <span class="number d-flex align-items-center justify-content-center">3</span>
-                <span class="text"><?php the_field('step_3_text'); ?></span>
-            </a>
-        </div>
-    </div>
 
     <form action="" method="post">
 
-        <div class="onboarding-form form-1" id="form-1">
-            <h1 class="h2"><?php the_field('step_1_title'); ?></h1>
-            <div class="text">
-                <p><?php the_field('step_1_desc'); ?></p>
-            </div>
-            <div class="input-group">
-                <input id="input_1" name="SelectedPackage" type="radio" value="Essential">
-                <label for="input_1" class="option active">
-                    <div class="plan"><?php the_field('plan_name_1','12'); ?></div>
-                    <div class="price">
-                        <?php the_field('plan_price_1','12'); ?> $/month
-                    </div>
-                    <p> <?php the_field('plan_text_1','12'); ?></p>
-                </label>
-            </div>
-
-            <div class="input-group">
-                <input id="input_2" name="SelectedPackage" type="radio" value="Accelerate">
-                <label for="input_2" class="option">
-                    <div class="plan"><?php the_field('plan_name_2','12'); ?></div>
-                    <div class="price">
-                        <?php the_field('plan_price_2','12'); ?> $/month
-                    </div>
-                    <p> <?php the_field('plan_text_2','12'); ?></p>
-                </label>
-            </div>
-
-            <div class="input-group">
-                <input id="input_3" name="SelectedPackage" type="radio" value="Ultimate">
-                <label for="input_3" class="option">
-                    <div class="plan"><?php the_field('plan_name_3','12'); ?></div>
-                    <div class="price">
-                        <?php the_field('plan_price_3','12'); ?> $/month
-                    </div>
-                    <p> <?php the_field('plan_text_3','12'); ?></p>
-                </label>
-            </div>
-
-            <label class="next-step" id="next-step-1">
-                continue
-            </label>
-
-        </div>
-
         <div class="onboarding-form form-2" id="form-2">
+            <h1 class="h2">Billing Information</h1>
+            <div class="text">
+                All fields are required.
+            </div>
+            <div class="row">
+                <div class="col-12 input-wrap">
+                    <label for="business-name">Business Name</label>
+                    <input required id="business-name" name="business-name" type="text">
+                </div>
+                <div class="col-12 col-md-6 input-wrap">
+                    <label for="tax">Tax Number</label>
+                    <input required id="tax" name="tax" type="text">
+                </div>
+                <div class="col-12 col-md-6 input-wrap">
+                    <label for="activity">Activity</label>
+                    <input required id="activity" name="phone" type="activity">
+                </div>
+            </div>
+            <h2 class="h2">Location</h2>
+            <div class="row">
+                <div class="col-12 input-wrap">
+                    <label for="street-l">Street</label>
+                    <input required id="street-l" name="street-l" type="text">
+                </div>
+                <div class="col-12 col-md-6 input-wrap">
+                    <label for="city-l">City</label>
+                    <input required id="city-l" name="city-l" type="text">
+                </div>
+                <div class="col-12 col-md-6 input-wrap">
+                    <label for="state-l">State/Province</label>
+                    <input required id="state-l" name="state-l" type="text">
+                </div>
+                <div class="col-12 col-md-6 input-wrap">
+                    <label for="country-l">Country</label>
+                    <input required id="country-l" name="country-l" type="text">
+                </div>
+                <div class="col-12 col-md-6 input-wrap">
+                    <label for="code-l">Postal Code</label>
+                    <input required id="code-l" name="code-l" type="text">
+                </div>
+            </div>
             <h2 class="h2">Information</h2>
             <div class="text">
                 All fields are required.
@@ -96,8 +74,12 @@ get_header();
                     <input required id="phone" name="phone" type="tel">
                 </div>
             </div>
-            <h2 class="h2">Billing Addressn</h2>
-            <div class="row">
+            <h2 class="h2">Billing Address</h2>
+            <div class="row" id="billing-address">
+                <div class="col-12 input-wrap">
+                    <input type="checkbox" name="same" id="same">
+                    <label for="same">The same as location information.</label>
+                </div>
                 <div class="col-12 input-wrap">
                     <label for="street">Street</label>
                     <input required id="street" name="street" type="text">

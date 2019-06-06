@@ -1,15 +1,47 @@
 <?php get_header(); ?>
 
 <div class="banner" style="background-image: url(<?php the_field('background_1'); ?>)">
-    <div class="content">
-        <h1 class="h1">
-            <?php the_field('title_1'); ?>
-        </h1>
-        <div class="text">
-            <p>
-                <?php the_field('text_1'); ?>
-            </p>
+    <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="10000">
+        <div class="carousel-inner">
+            <?php
+            if( have_rows('banner_s') ):
+                $r = 0;
+                while ( have_rows('banner_s') ) : the_row(); ?>
+
+                    <div class="carousel-item">
+                        <div class="content">
+                            <?php if ($r == 0){ ?>
+                                <h1 class="h1">
+                                    <?php the_sub_field('title'); ?>
+                                </h1>
+                            <?php } else { ?>
+                                <h2 class="h1">
+                                    <?php the_sub_field('title'); ?>
+                                </h2>
+                            <?php } ?>
+                            <div class="text">
+                                <p>
+                                    <?php the_sub_field('text'); ?>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <?php
+                    $r++;
+                endwhile;
+
+            endif;
+            ?>
         </div>
+        <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/dist/svg/back-2.svg" alt="">
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/dist/svg/right-arrow-2.svg" alt="">
+            <span class="sr-only">Next</span>
+        </a>
     </div>
 </div>
 
@@ -38,38 +70,12 @@
 </div>
 
 <div class="slider">
-    <div id="carouselIndicators" class="carousel slide" data-ride="carousel" data-interval="100000">
-        <div class="carousel-inner">
-            <?php
-            if( have_rows('slider_1') ):
-                $r = 0;
-                while ( have_rows('slider_1') ) : the_row(); ?>
-
-                    <div class="carousel-item <?php if ($r == 0): echo "active"; endif; ?>" >
-                        <div class="image-block">
-                            <img src="<?php the_sub_field('image');?>" class="d-block" alt="...">
-                        </div>
-                        <div class="slider-info">
-                            <h5><?php the_sub_field('title');?></h5>
-                            <p><?php the_sub_field('text');?></p>
-                        </div>
-                    </div>
-
-                 <?php
-                $r++;
-                endwhile;
-
-            endif;
-            ?>
-        </div>
-        <a class="carousel-control-prev" href="#carouselIndicators" role="button" data-slide="prev">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/dist/svg/back.svg" alt="">
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselIndicators" role="button" data-slide="next">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/dist/svg/right-arrow.svg" alt="">
-            <span class="sr-only">Next</span>
-        </a>
+    <div class="image-block">
+        <img src="<?php the_field('image_slider');?>" alt="...">
+    </div>
+    <div class="slider-info">
+        <h5><?php the_field('title_slider');?></h5>
+        <p><?php the_field('text_slider');?></p>
     </div>
 </div>
 

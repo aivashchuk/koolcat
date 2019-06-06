@@ -13,6 +13,18 @@
     background-color: rgba(0,0,0,.7);
     z-index: 1;
   }
+  .carousel {
+    position: relative;
+    z-index: 2;
+    a {
+      opacity: 1;
+      height: 25px;
+      width: 25px;
+      margin: 0 15px;
+      top: calc(50% - 12px);
+      cursor: pointer;
+    }
+  }
   &.banner-min {
     padding: 100px 0;
   }
@@ -23,6 +35,12 @@
     color: #fff;
     position: relative;
     z-index: 2;
+    min-height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    display: flex;
   }
   .h1 {
     font-size: 40px;
@@ -39,11 +57,19 @@
   }
   @media screen and (max-width: 767px) {
     padding: 70px 20px;
+    .carousel {
+      a {
+        margin: 0 -15px;
+      }
+    }
     .h1 {
       font-size: 30px;
     }
     .text {
       font-size: 15px;
+    }
+    .content {
+      padding: 0 20px;
     }
   }
 }
@@ -54,25 +80,14 @@
   margin-bottom: 80px;
   position: relative;
   z-index: 3;
-  a[role="button"] {
-    height: 30px;
-    opacity: 1;
-    top: 50%;
-    margin-top: -15px;
+  .image-block {
+    max-width: 1040px;
+    margin: 0 auto;
+    height: 650px;
     img {
-      max-height: 100%;
-    }
-  }
-  .carousel-item {
-    .image-block {
-      max-width: 1040px;
+      max-width: 100%;
       margin: 0 auto;
-      height: 650px;
-      img {
-        max-width: 100%;
-        margin: 0 auto;
-        max-height: 100%;
-      }
+      max-height: 100%;
     }
   }
   .slider-info {
@@ -89,38 +104,24 @@
     }
   }
   @media screen and (max-width: 1199px) {
-    .carousel-item {
-      .image-block {
-        max-width: 700px;
-        height: 440px;
-      }
+    .image-block {
+      max-width: 700px;
+      height: 440px;
     }
   }
   @media screen and (max-width: 991px) {
-    .carousel-item {
-      .image-block {
-        max-width: 500px;
-        height: 315px;
-      }
+    .image-block {
+      max-width: 500px;
+      height: 315px;
     }
   }
   @media screen and (max-width: 767px) {
     margin-top: 30px;
-    .carousel-item {
-      .image-block {
-        max-width: 100%;
-        padding-left: 40px;
-        padding-right: 40px;
-        height: auto;
-      }
-    }
-    a[role="button"] {
-      left: 0;
-      width: 15px;
-      &.carousel-control-next {
-        right: 0;
-        left: initial;
-      }
+    .image-block {
+      max-width: 100%;
+      padding-left: 40px;
+      padding-right: 40px;
+      height: auto;
     }
   }
 }

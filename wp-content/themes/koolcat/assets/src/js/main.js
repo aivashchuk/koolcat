@@ -13,51 +13,73 @@ const App = {
 		}
 		initGeneralScripts();
 	},
-	onboardForms() {
+	mainSlider() {
+		function sliderHeight() {
+			$('#carousel .carousel-item').height('auto');
+			$('#carousel').each(function () {
+				$(this).find('.carousel-item').addClass('active');
 
-		if(window.location.href.indexOf("plan-2") > -1) {
-			$('.option').removeClass('active');
-			$('#input_2').attr('checked','checked');
-			$('label[for="input_2"]').addClass('active');
+				var tHeight = 0;
+				$(this).find('.carousel-item').each(function () {
+					if ($(this).height() > tHeight) {
+						tHeight = $(this).height();
+					}
+				});
+				$('#carousel .carousel-item').height(tHeight);
+
+			});
+
+			$('#carousel .carousel-item:not(.carousel-item:first-child)').removeClass('active');
+
+			if ($('#carousel .carousel-item').length < 2) {
+				$('#carousel > a').hide();
+			}
 		}
-
-		if(window.location.href.indexOf("plan-3") > -1) {
-			$('.option').removeClass('active');
-			$('#input_2').attr('checked','checked');
-			$('label[for="input_3"]').addClass('active');
-		}
-
-		$('.input-group .option').on('click', function checkBox() {
-			$('.option').removeClass('active');
-			$(this).addClass('active');
-			$(this).siblings('input').attr('checked', 'checked');
+		sliderHeight();
+		$(window).resize(function () {
+			sliderHeight();
+			console.log(1);
 		});
+		window.addEventListener("orientationchange", function() {
+			sliderHeight();
+		}, false);
+	},
 
-		$('#next-step-1, a.step-2').on('click', function nextForm() {
-			$('.onboarding-form').hide();
-			$('#form-2').fadeIn(500);
-			$('.step').removeClass('active');
-			$('.step-2').addClass('active');
-		});
-		$('a.step-1').on('click', function nextForm() {
-			$('.onboarding-form').hide();
-			$('#form-1').fadeIn(500);
-			$('.step').removeClass('active');
-			$('.step-1').addClass('active');
-		});
-		$('a.step-3').on('click', function nextForm() {
-			$('.onboarding-form').hide();
-			$('#form-3').fadeIn(500);
-			$('.step').removeClass('active');
-			$('.step-3').addClass('active');
+	checkBox() {
+		const same = $('#same');
+
+		let street,
+			city,
+			state,
+			country,
+			code;
+
+		same.on('change',function (){
+			if ($(this).prop('checked')) {
+				street = $('#street-l').val();
+				city = $('#city-l').val();
+				state = $('#state-l').val();
+				code = $('#code-l').val();
+				country = $('#country-l').val();
+
+				$('#street').val(street);
+				$('#city').val(city);
+				$('#state').val(state);
+				$('#code').val(code);
+				$('#country').val(country);
+
+				console.log(street);
+			} else {
+				$('#billing-address input').val('');
+			}
 		});
 	}
-
 };
 
 document.addEventListener('DOMContentLoaded', () => {
 	$(() => {
 		App.init();
-		App.onboardForms();
+		App.mainSlider();
+		App.checkBox();
 	});
 });
