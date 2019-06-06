@@ -13,6 +13,30 @@
     </div>
 </div>
 
+<div class="advantage">
+    <div class="d-flex flex-wrap">
+        <?php
+        if( have_rows('features') ):
+            while ( have_rows('features') ) : the_row(); ?>
+
+                <div class="col-12 col-md-6 a-item">
+                    <div class="media align-items-center">
+                        <img src="<?php the_sub_field('image');?>" alt="">
+                        <div class="media-body">
+                            <div class="ttl"><?php the_sub_field('title');?></div>
+                            <p><?php the_sub_field('text');?></p>
+                        </div>
+                    </div>
+                </div>
+
+            <?php
+            endwhile;
+
+        endif;
+        ?>
+    </div>
+</div>
+
 <div class="slider">
     <div id="carouselIndicators" class="carousel slide" data-ride="carousel" data-interval="100000">
         <div class="carousel-inner">
@@ -49,30 +73,6 @@
     </div>
 </div>
 
-<div class="advantage">
-    <div class="d-flex flex-wrap">
-        <?php
-        if( have_rows('features') ):
-            while ( have_rows('features') ) : the_row(); ?>
-
-                <div class="col-12 col-md-6 a-item">
-                    <div class="media align-items-center">
-                        <img src="<?php the_sub_field('image');?>" alt="">
-                        <div class="media-body">
-                            <div class="ttl"><?php the_sub_field('title');?></div>
-                            <p><?php the_sub_field('text');?></p>
-                        </div>
-                    </div>
-                </div>
-
-                <?php
-            endwhile;
-
-        endif;
-        ?>
-    </div>
-</div>
-
 <div class="software d-flex justify-content-center">
     <div class="image">
         <img src="<?php the_field('image_2'); ?>" alt="">
@@ -103,7 +103,7 @@
 </div>
 
 <div class="reviews">
-    <h2>Reviewers love our software</h2>
+    <h2><?php the_field('title_rev'); ?></h2>
     <div class="d-flex flex-wrap">
         <?php
         if( have_rows('reviews') ):
@@ -122,7 +122,5 @@
 
     </div>
 </div>
-
-<?php include 'form.php' ?>
 
 <?php get_footer(); ?>

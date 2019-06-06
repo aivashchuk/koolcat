@@ -1,6 +1,6 @@
 .banner {
   background-size: cover;
-  padding: 150px 0 270px;
+  padding: 150px 0 ;
   text-align: center;
   position: relative;
   &:after {
@@ -34,11 +34,8 @@
     font-weight: 500;
     line-height: 1.6;
   }
-  @media screen and (max-width: 1199px) {
-    padding-bottom: 170px;
-  }
   @media screen and (max-width: 991px) {
-    padding-top: 100px;
+    padding: 100px 0;
   }
   @media screen and (max-width: 767px) {
     padding: 70px 20px;
@@ -53,7 +50,8 @@
 
 
 .slider {
-  margin-top: -210px;
+  margin-top: 30px;
+  margin-bottom: 80px;
   position: relative;
   z-index: 3;
   a[role="button"] {
@@ -91,7 +89,6 @@
     }
   }
   @media screen and (max-width: 1199px) {
-    margin-top: -100px;
     .carousel-item {
       .image-block {
         max-width: 700px;
@@ -100,7 +97,6 @@
     }
   }
   @media screen and (max-width: 991px) {
-    margin-top: -100px;
     .carousel-item {
       .image-block {
         max-width: 500px;
@@ -134,10 +130,10 @@
   .a-item {
     padding: 30px;
     img {
-      border-radius: 250px;
-      max-width: 250px;
-      max-height: 250px;
+      max-width: 200px;
+      max-height: 200px;
       border: 1px solid #ccc;
+      background-color: gray;
     }
     .media-body {
       padding-left: 15px;
@@ -165,8 +161,8 @@
     .a-item {
       padding: 15px;
       img {
-        max-width: 150px;
-        max-height: 150px;
+        max-width: 140px;
+        max-height: 140px;
       }
       p {
         font-size: 14px;

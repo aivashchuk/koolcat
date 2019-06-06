@@ -88,6 +88,11 @@
           color: $lightBlue;
         }
       }
+      &.current-menu-item {
+        a {
+          color: $lightBlue;
+        }
+      }
     }
   }
   @media screen and (max-width: 767px) {
