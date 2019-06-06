@@ -136,6 +136,4 @@ get_header();
 
 </div>
 
-<?php include 'form.php' ?>
-
 <?php get_footer(); ?>
