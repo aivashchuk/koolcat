@@ -56,11 +56,11 @@ const App = {
 
 		same.on('change',function (){
 			if ($(this).prop('checked')) {
-				street = $('#street-l').val();
-				city = $('#city-l').val();
-				state = $('#state-l').val();
-				code = $('#code-l').val();
-				country = $('#country-l').val();
+				street = $('#street_l').val();
+				city = $('#city_l').val();
+				state = $('#state_l').val();
+				code = $('#code_l').val();
+				country = $('#country_l').val();
 
 				$('#street').val(street);
 				$('#city').val(city);
@@ -68,7 +68,6 @@ const App = {
 				$('#code').val(code);
 				$('#country').val(country);
 
-				console.log(street);
 			} else {
 				$('#billing-address input').val('');
 			}

@@ -8,7 +8,7 @@ get_header();
 
 <div class="onboarding-page">
 
-    <form action="" method="post">
+    <form action="https://api.mykoolcat.com/api/landing" method="post">
 
         <div class="onboarding-form form-2" id="form-2">
             <h1 class="h2">Billing Information</h1>
@@ -17,8 +17,8 @@ get_header();
             </div>
             <div class="row">
                 <div class="col-12 input-wrap">
-                    <label for="business-name">Business Name</label>
-                    <input required id="business-name" name="business-name" type="text">
+                    <label for="business_name">Business Name</label>
+                    <input required id="business_name" name="business_name" type="text">
                 </div>
                 <div class="col-12 col-md-6 input-wrap">
                     <label for="tax">Tax Number</label>
@@ -26,30 +26,30 @@ get_header();
                 </div>
                 <div class="col-12 col-md-6 input-wrap">
                     <label for="activity">Activity</label>
-                    <input required id="activity" name="phone" type="activity">
+                    <input required id="activity" name="activity" type="text">
                 </div>
             </div>
             <h2 class="h2">Location</h2>
             <div class="row">
                 <div class="col-12 input-wrap">
-                    <label for="street-l">Street</label>
-                    <input required id="street-l" name="street-l" type="text">
+                    <label for="street_l">Street</label>
+                    <input required id="street_l" name="street_l" type="text">
                 </div>
                 <div class="col-12 col-md-6 input-wrap">
-                    <label for="city-l">City</label>
-                    <input required id="city-l" name="city-l" type="text">
+                    <label for="city_l">City</label>
+                    <input required id="city_l" name="city_l" type="text">
                 </div>
                 <div class="col-12 col-md-6 input-wrap">
-                    <label for="state-l">State/Province</label>
-                    <input required id="state-l" name="state-l" type="text">
+                    <label for="state_l">State/Province</label>
+                    <input required id="state_l" name="state_l" type="text">
                 </div>
                 <div class="col-12 col-md-6 input-wrap">
-                    <label for="country-l">Country</label>
-                    <input required id="country-l" name="country-l" type="text">
+                    <label for="country_l">Country</label>
+                    <input required id="country_l" name="country_l" type="text">
                 </div>
                 <div class="col-12 col-md-6 input-wrap">
-                    <label for="code-l">Postal Code</label>
-                    <input required id="code-l" name="code-l" type="text">
+                    <label for="code_l">Postal Code</label>
+                    <input required id="code_l" name="code_l" type="text">
                 </div>
             </div>
             <h2 class="h2">Information</h2>
@@ -58,12 +58,12 @@ get_header();
             </div>
             <div class="row">
                 <div class="col-12 col-md-6 input-wrap">
-                    <label for="first-name">First Name</label>
-                    <input required id="first-name" name="first-name" type="text">
+                    <label for="first_name">First Name</label>
+                    <input required id="first_name" name="first_name" type="text">
                 </div>
                 <div class="col-12 col-md-6 input-wrap">
-                    <label for="last-name">Last Name</label>
-                    <input required id="last-name" name="last-name" type="text">
+                    <label for="last_name">Last Name</label>
+                    <input required id="last_name" name="last_name" type="text">
                 </div>
                 <div class="col-12 col-md-6 input-wrap">
                     <label for="email">Email</label>
@@ -109,12 +109,12 @@ get_header();
                     </div>
                 </div>
                 <div class="col-12 input-wrap">
-                    <label for="card-number">Card Number</label>
-                    <input required id="card-number" name="card-number" type="text">
+                    <label for="card_number">Card Number</label>
+                    <input required id="card_number" name="card_number" type="text">
                 </div>
                 <div class="col-12 col-md-6 input-wrap">
-                    <label for="card-name">Cardholder Name</label>
-                    <input required id="card-name" name="card-name" type="text">
+                    <label for="card_name">Cardholder Name</label>
+                    <input required id="card_name" name="card_name" type="text">
                 </div>
                 <div class="col-12 col-md-6 input-wrap">
                     <label for="month">Expiration Month</label>
