@@ -15650,6 +15650,33 @@ img {
           font-size: 30px;
           margin-bottom: 30px; } }
 
+img.alignright {
+  float: right;
+  margin: 0 0 1em 1em; }
+
+img.alignleft {
+  float: left;
+  margin: 0 1em 1em 0; }
+
+img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.alignright {
+  float: right; }
+
+.alignleft {
+  float: left; }
+
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+.single-h2 {
+  margin-bottom: 30px; }
+
 .banner {
   background-size: cover;
   padding: 150px 0;

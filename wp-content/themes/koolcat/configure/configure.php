@@ -102,3 +102,37 @@
         return $mimes;
     }
     add_filter('upload_mimes', 'cc_mime_types');
+
+add_action('init', 'create_post_type_features');
+function create_post_type_features()
+{
+    register_post_type('feature', // Register Custom Post Type
+        array(
+            'labels' => array(
+                'name' => __('Features', 'html5blank'),
+                'singular_name' => __('Feature', 'html5blank'),
+                'add_new' => __('Add New', 'html5blank'),
+                'add_new_item' => __('Add New', 'html5blank'),
+                'edit' => __('Edit', 'html5blank'),
+                'edit_item' => __('Edit', 'html5blank'),
+                'new_item' => __('New', 'html5blank'),
+                'view' => __('View', 'html5blank'),
+                'view_item' => __('View', 'html5blank'),
+                'search_items' => __('Search', 'html5blank'),
+                'not_found' => __('No found', 'html5blank'),
+                'not_found_in_trash' => __('No found in Trash', 'html5blank')
+            ),
+            'public' => true,
+            'hierarchical' => true,
+            'has_archive' => false,
+            'publicly_queryable'  => true,
+            'menu_icon'  => 'dashicons-portfolio',
+            'supports' => array(
+                'title',
+                'editor',
+                'excerpt',
+                'thumbnail'
+            ),
+            'can_export' => true
+        ));
+}
