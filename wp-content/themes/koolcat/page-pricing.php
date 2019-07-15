@@ -60,7 +60,7 @@ get_header();
                 <div class="price">
                     <span class="currency">$</span> <?php the_field('plan_price_2'); ?> <span class="duration">/ MO</span>
                 </div>
-                <a href="<?php the_field('onboarding_page'); ?>/#plan-2" class="buy">buy now</a>
+                <a href="<?php the_field('onboarding_page'); ?>/#plan-2" class="buy">free trial</a>
             </div>
         </div>
         <div class="col-12 info-table d-block d-md-none">
@@ -88,7 +88,7 @@ get_header();
                 <div class="price">
                     <span class="currency">$</span> <?php the_field('plan_price_3'); ?> <span class="duration">/ MO</span>
                 </div>
-                <a href="<?php the_field('onboarding_page'); ?>/#plan-3" class="buy">buy now</a>
+                <a href="<?php the_field('onboarding_page'); ?>/#plan-3" class="buy">free trial</a>
             </div>
         </div>
         <div class="col-12 info-table d-block d-md-none">
