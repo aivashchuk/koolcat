@@ -31,7 +31,7 @@ get_header();
                 <div class="price">
                     <span class="currency">$</span> <?php the_field('plan_price_1'); ?> <span class="duration">/ MO</span>
                 </div>
-                <a href="<?php the_field('onboarding_page'); ?>" class="buy">buy now</a>
+                <a href="<?php the_field('onboarding_page'); ?>" class="buy">free trial</a>
             </div>
         </div>
         <div class="col-12 info-table d-block d-md-none">
