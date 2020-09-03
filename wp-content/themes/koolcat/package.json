@@ -66,7 +66,7 @@
     "breakpoint-sass": "^2.7.1",
     "breakpoint-slicer": "^2.0.0",
     "jquery": "3.4.0",
-    "lazysizes": "1.4.0",
+    "lazysizes": "5.2.1",
     "picturefill": "3.0.3",
     "popper.js": "1.15.0"
   }
